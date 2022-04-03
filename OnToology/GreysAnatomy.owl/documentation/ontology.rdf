@@ -1,0 +1,892 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#"
+     xml:base="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:GreysAnatomyOntology="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology">
+        <terms:license>http://purl.org/NET/rdflicense/cc-by4.0</terms:license>
+        <rdfs:comment>Ontology from the TV Series Grey&apos;s Anatomy.</rdfs:comment>
+        <foaf:Author>Clàudia Amat Casals</foaf:Author>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Author -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/Author"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#goTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#goTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Characters"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Hospital"/>
+        <rdfs:label xml:lang="en">goesTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasDoctor -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasDoctor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Patients"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Doctor"/>
+        <rdfs:label xml:lang="en">hasDoctor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasIllness -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasIllness">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Patients"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Illness"/>
+        <rdfs:label xml:lang="en">hasIllness</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasSpecialty -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasSpecialty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Hospital"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Specialties"/>
+        <rdfs:label xml:lang="en">hasSpecialty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#isBoss -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#isBoss">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Characters"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Hospital"/>
+        <rdfs:label xml:lang="en">isBoss</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#isLocated -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#isLocated">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Hospital"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#City"/>
+        <rdfs:label xml:lang="en">isLocated</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#isOwner -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#isOwner">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Characters"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Hospital"/>
+        <rdfs:label xml:lang="en">isOwner</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#treats -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#treats">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Doctor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Illness"/>
+        <rdfs:label xml:lang="en">treats</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#estimatedMonthsLeft -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#estimatedMonthsLeft">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Deadly"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+        <rdfs:label xml:lang="en">estimatedMonthsLeft</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasStreet -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasStreet">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Hospital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">hasStreet</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasZipCode -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasZipCode">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#City"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The zipcode is a string instead of an int because if it begins with a 0, it won&apos;t be registrated in int type</rdfs:comment>
+        <rdfs:label xml:lang="en">hasZipCode</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#name">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#City"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Doctor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Hospital"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Illness"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Nurse"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Patients"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#numWorkers -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#numWorkers">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Hospital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+        <rdfs:label xml:lang="en">numWorkers</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Boss -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Boss">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Management"/>
+        <rdfs:comment xml:lang="en">Info about the boss or bosses that has had the hospital over the years</rdfs:comment>
+        <rdfs:label xml:lang="en">Boss</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Cardiology -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Cardiology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Specialties"/>
+        <rdfs:comment xml:lang="en">Cardiology</rdfs:comment>
+        <rdfs:label xml:lang="en">Cardiology</rdfs:label>
+        <rdfs:sameAs>https://bioportal.bioontology.org/ontologies/SNOMEDCT/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2FSNOMEDCT%2F394579002&amp;jump_to_nav=true</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Characters -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Characters">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Contains all the characters that appear on the chapters</rdfs:comment>
+        <rdfs:label xml:lang="en">Characters</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#City -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#City">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Location"/>
+        <rdfs:comment xml:lang="en">Contains information about all the cities where the hospitals are located</rdfs:comment>
+        <rdfs:label xml:lang="en">City</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Deadly -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Deadly">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Illness"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Minor"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Severe"/>
+        <rdfs:comment xml:lang="en">Illness that causes death in less than 3 years</rdfs:comment>
+        <rdfs:label xml:lang="en">Deadly</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Doctor -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Doctor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Workers"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Nurse"/>
+        <rdfs:comment xml:lang="en">All the doctros that appear in the series</rdfs:comment>
+        <rdfs:label xml:lang="en">Doctor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Hospital -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Hospital">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Containts information about all the hospitals that appear</rdfs:comment>
+        <rdfs:label xml:lang="en">Hospital</rdfs:label>
+        <rdfs:sameAs>https://bioportal.bioontology.org/ontologies/SNOMEDCT/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2FSNOMEDCT%2F22232009&amp;jump_to_nav=true</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#HospitalizedPatient -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#HospitalizedPatient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Patients"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#OneDayPatient"/>
+        <rdfs:comment xml:lang="en">Patient that needs to stay at the hospital more than one day</rdfs:comment>
+        <rdfs:label xml:lang="en">HospitalizedPatient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Illness -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Illness">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Information about all the illnesses that the hospital treats</rdfs:comment>
+        <rdfs:label xml:lang="en">Illness</rdfs:label>
+        <rdfs:sameAs>https://bioportal.bioontology.org/ontologies/SNOMEDCT/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2FSNOMEDCT%2F39104002&amp;jump_to_nav=true</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Location -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Location">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Hospital"/>
+        <rdfs:comment xml:lang="en">Contains information about the locations of the hospitals</rdfs:comment>
+        <rdfs:label xml:lang="en">Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Management -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Management">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Hospital"/>
+        <rdfs:comment xml:lang="en">Contains information about how the managment of the hospital works</rdfs:comment>
+        <rdfs:label xml:lang="en">Management</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Minor -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Minor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Illness"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Severe"/>
+        <rdfs:comment xml:lang="en">Illness that lets the patient live his life without many problems</rdfs:comment>
+        <rdfs:label xml:lang="en">Minor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Neurology -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Neurology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Specialties"/>
+        <rdfs:comment xml:lang="en">Neurology</rdfs:comment>
+        <rdfs:label xml:lang="en">Neurology</rdfs:label>
+        <rdfs:sameAs>https://bioportal.bioontology.org/ontologies/SNOMEDCT/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2FSNOMEDCT%2F394591006&amp;jump_to_nav=true</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Nurse -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Nurse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Workers"/>
+        <rdfs:comment xml:lang="en">All the nurses that appear in the series</rdfs:comment>
+        <rdfs:label xml:lang="en">Nurse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#OneDayPatient -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#OneDayPatient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Patients"/>
+        <rdfs:comment xml:lang="en">Patient that comes to the hospital and leaves it in the same day</rdfs:comment>
+        <rdfs:label xml:lang="en">OneDayPatient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Owner -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Owner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Management"/>
+        <rdfs:comment xml:lang="en">Information about all of the multiple owners that the hospital has</rdfs:comment>
+        <rdfs:label xml:lang="en">Owner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#PalliativeCare -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#PalliativeCare">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Specialties"/>
+        <rdfs:comment xml:lang="en">Palliative care</rdfs:comment>
+        <rdfs:comment>Every patient that has a deadly illnes, has a palliative doctor</rdfs:comment>
+        <rdfs:label>Palliative</rdfs:label>
+        <rdfs:sameAs>https://bioportal.bioontology.org/ontologies/SNOMEDCT/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2FSNOMEDCT%2F103735009&amp;jump_to_nav=true</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Patients -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Patients">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Characters"/>
+        <rdfs:comment xml:lang="en">Contains all the patients</rdfs:comment>
+        <rdfs:label xml:lang="en">Patients</rdfs:label>
+        <rdfs:sameAs>https://bioportal.bioontology.org/ontologies/SNOMEDCT/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2FSNOMEDCT%2F116154003&amp;jump_to_nav=true</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#PlasticSurgery -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#PlasticSurgery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Specialties"/>
+        <rdfs:comment xml:lang="en">Plastic surgery</rdfs:comment>
+        <rdfs:label xml:lang="en">PlasticSurgery</rdfs:label>
+        <rdfs:sameAs>https://bioportal.bioontology.org/ontologies/SNOMEDCT/?p=classes&amp;conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2FSNOMEDCT%2F394611003&amp;jump_to_nav=true</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Severe -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Severe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Illness"/>
+        <rdfs:comment xml:lang="en">Illness that doesn&apos;t necessary lead to death but that needs treatment</rdfs:comment>
+        <rdfs:label xml:lang="en">Severe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Specialties -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Specialties">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Hospital"/>
+        <rdfs:comment xml:lang="en">Specialties that are treated in the hospital</rdfs:comment>
+        <rdfs:label xml:lang="en">Specialties</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Workers -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Workers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Characters"/>
+        <rdfs:comment xml:lang="en">Containts all the workers</rdfs:comment>
+        <rdfs:label xml:lang="en">Workers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#BrainCancer -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#BrainCancer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Deadly"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#DerekSheperd -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#DerekSheperd">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Doctor"/>
+        <goTo rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#GreySloanMemorial"/>
+        <treats rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#JackDawson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#GreySloanMemorial -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#GreySloanMemorial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Hospital"/>
+        <isLocated rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Seattle"/>
+        <hasStreet>exampleStreet</hasStreet>
+        <numWorkers rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">800</numWorkers>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#HighBloodPreasure -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#HighBloodPreasure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Minor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#JackDawson -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#JackDawson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#HospitalizedPatient"/>
+        <goTo rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#GreySloanMemorial"/>
+        <hasDoctor rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#DerekSheperd"/>
+        <hasIllness rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#BrainCancer"/>
+        <name>Jack</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#MeredithGrey -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#MeredithGrey">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Doctor"/>
+        <goTo rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#GreySloanMemorial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#MirandaBaily -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#MirandaBaily">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Boss"/>
+        <goTo rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#GreySloanMemorial"/>
+        <isBoss rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#GreySloanMemorial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Seattle -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Seattle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Cardiology"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Neurology"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#PlasticSurgery"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="urn:swrl:var#o">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#i">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#w">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#d">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment>If a patient has less than two months left, he is hospitalized</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Patients"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasIllness"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#i"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Deadly"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#i"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#estimatedMonthsLeft"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#w"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="urn:swrl:var#w"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#HospitalizedPatient"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment>Every patient with a deadly illness, gets a palliative doctor</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Patients"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasIllness"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#w"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Deadly"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#PalliativeCare"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Doctor"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#d"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasSpecialty"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#d"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasDoctor"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#d"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment>If the illnes is minor, the patient doesn&apos;t stay at the hospital</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Patients"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasIllness"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#w"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Minor"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#OneDayPatient"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
