@@ -1,0 +1,528 @@
+@prefix : <http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#> .
+
+<http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology> rdf:type owl:Ontology ;
+                                                                           <http://purl.org/dc/terms/license> "http://purl.org/NET/rdflicense/cc-by4.0" ;
+                                                                           rdfs:comment "Ontology from the TV Series Grey's Anatomy." ;
+                                                                           <http://xmlns.com/foaf/0.1/Author> "Clàudia Amat Casals" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/Author
+<http://xmlns.com/foaf/0.1/Author> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#goTo
+:goTo rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdf:type owl:AsymmetricProperty ;
+      rdfs:domain :Characters ;
+      rdfs:range :Hospital ;
+      rdfs:label "goesTo"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasDoctor
+:hasDoctor rdf:type owl:ObjectProperty ,
+                    owl:AsymmetricProperty ;
+           rdfs:domain :Patients ;
+           rdfs:range :Doctor ;
+           rdfs:label "hasDoctor"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasIllness
+:hasIllness rdf:type owl:ObjectProperty ;
+            rdfs:domain :Patients ;
+            rdfs:range :Illness ;
+            rdfs:label "hasIllness"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasSpecialty
+:hasSpecialty rdf:type owl:ObjectProperty ;
+              rdfs:domain :Hospital ;
+              rdfs:range :Specialties ;
+              rdfs:label "hasSpecialty"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#isBoss
+:isBoss rdf:type owl:ObjectProperty ;
+        rdfs:domain :Characters ;
+        rdfs:range :Hospital ;
+        rdfs:label "isBoss"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#isLocated
+:isLocated rdf:type owl:ObjectProperty ;
+           rdfs:domain :Hospital ;
+           rdfs:range :City ;
+           rdfs:label "isLocated"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#isOwner
+:isOwner rdf:type owl:ObjectProperty ;
+         rdfs:domain :Characters ;
+         rdfs:range :Hospital ;
+         rdfs:label "isOwner"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#treats
+:treats rdf:type owl:ObjectProperty ;
+        rdfs:domain :Doctor ;
+        rdfs:range :Illness ;
+        rdfs:label "treats"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#estimatedMonthsLeft
+:estimatedMonthsLeft rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :Deadly ;
+                     rdfs:range xsd:unsignedInt ;
+                     rdfs:label "estimatedMonthsLeft"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasStreet
+:hasStreet rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Hospital ;
+           rdfs:range xsd:string ;
+           rdfs:label "hasStreet"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasZipCode
+:hasZipCode rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :City ;
+            rdfs:range xsd:string ;
+            rdfs:comment "The zipcode is a string instead of an int because if it begins with a 0, it won't be registrated in int type"@en ;
+            rdfs:label "hasZipCode"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( :City
+                                  :Doctor
+                                  :Hospital
+                                  :Illness
+                                  :Nurse
+                                  :Patients
+                                )
+                  ] ;
+      rdfs:range xsd:string ;
+      rdfs:label "name"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#numWorkers
+:numWorkers rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Hospital ;
+            rdfs:range xsd:unsignedInt ;
+            rdfs:label "numWorkers"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Boss
+:Boss rdf:type owl:Class ;
+      rdfs:subClassOf :Management ;
+      rdfs:comment "Info about the boss or bosses that has had the hospital over the years"@en ;
+      rdfs:label "Boss"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Cardiology
+:Cardiology rdf:type owl:Class ;
+            rdfs:subClassOf :Specialties ;
+            rdfs:comment "Cardiology"@en ;
+            rdfs:label "Cardiology"@en ;
+            rdfs:sameAs "https://bioportal.bioontology.org/ontologies/SNOMEDCT/?p=classes&conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2FSNOMEDCT%2F394579002&jump_to_nav=true" .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Characters
+:Characters rdf:type owl:Class ;
+            rdfs:subClassOf owl:Thing ;
+            rdfs:comment "Contains all the characters that appear on the chapters"@en ;
+            rdfs:label "Characters"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#City
+:City rdf:type owl:Class ;
+      rdfs:subClassOf :Location ;
+      rdfs:comment "Contains information about all the cities where the hospitals are located"@en ;
+      rdfs:label "City"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Deadly
+:Deadly rdf:type owl:Class ;
+        rdfs:subClassOf :Illness ;
+        owl:disjointWith :Minor ,
+                         :Severe ;
+        rdfs:comment "Illness that causes death in less than 3 years"@en ;
+        rdfs:label "Deadly"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Doctor
+:Doctor rdf:type owl:Class ;
+        rdfs:subClassOf :Workers ;
+        owl:disjointWith :Nurse ;
+        rdfs:comment "All the doctros that appear in the series"@en ;
+        rdfs:label "Doctor"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Hospital
+:Hospital rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:comment "Containts information about all the hospitals that appear"@en ;
+          rdfs:label "Hospital"@en ;
+          rdfs:sameAs "https://bioportal.bioontology.org/ontologies/SNOMEDCT/?p=classes&conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2FSNOMEDCT%2F22232009&jump_to_nav=true" .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#HospitalizedPatient
+:HospitalizedPatient rdf:type owl:Class ;
+                     rdfs:subClassOf :Patients ;
+                     owl:disjointWith :OneDayPatient ;
+                     rdfs:comment "Patient that needs to stay at the hospital more than one day"@en ;
+                     rdfs:label "HospitalizedPatient"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Illness
+:Illness rdf:type owl:Class ;
+         rdfs:subClassOf owl:Thing ;
+         rdfs:comment "Information about all the illnesses that the hospital treats"@en ;
+         rdfs:label "Illness"@en ;
+         rdfs:sameAs "https://bioportal.bioontology.org/ontologies/SNOMEDCT/?p=classes&conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2FSNOMEDCT%2F39104002&jump_to_nav=true" .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Location
+:Location rdf:type owl:Class ;
+          rdfs:subClassOf :Hospital ;
+          rdfs:comment "Contains information about the locations of the hospitals"@en ;
+          rdfs:label "Location"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Management
+:Management rdf:type owl:Class ;
+            rdfs:subClassOf :Hospital ;
+            rdfs:comment "Contains information about how the managment of the hospital works"@en ;
+            rdfs:label "Management"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Minor
+:Minor rdf:type owl:Class ;
+       rdfs:subClassOf :Illness ;
+       owl:disjointWith :Severe ;
+       rdfs:comment "Illness that lets the patient live his life without many problems"@en ;
+       rdfs:label "Minor"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Neurology
+:Neurology rdf:type owl:Class ;
+           rdfs:subClassOf :Specialties ;
+           rdfs:comment "Neurology"@en ;
+           rdfs:label "Neurology"@en ;
+           rdfs:sameAs "https://bioportal.bioontology.org/ontologies/SNOMEDCT/?p=classes&conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2FSNOMEDCT%2F394591006&jump_to_nav=true" .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Nurse
+:Nurse rdf:type owl:Class ;
+       rdfs:subClassOf :Workers ;
+       rdfs:comment "All the nurses that appear in the series"@en ;
+       rdfs:label "Nurse"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#OneDayPatient
+:OneDayPatient rdf:type owl:Class ;
+               rdfs:subClassOf :Patients ;
+               rdfs:comment "Patient that comes to the hospital and leaves it in the same day"@en ;
+               rdfs:label "OneDayPatient"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Owner
+:Owner rdf:type owl:Class ;
+       rdfs:subClassOf :Management ;
+       rdfs:comment "Information about all of the multiple owners that the hospital has"@en ;
+       rdfs:label "Owner"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#PalliativeCare
+:PalliativeCare rdf:type owl:Class ;
+                rdfs:subClassOf :Specialties ;
+                rdfs:comment "Palliative care"@en ,
+                             "Every patient that has a deadly illnes, has a palliative doctor" ;
+                rdfs:label "Palliative" ;
+                rdfs:sameAs "https://bioportal.bioontology.org/ontologies/SNOMEDCT/?p=classes&conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2FSNOMEDCT%2F103735009&jump_to_nav=true" .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Patients
+:Patients rdf:type owl:Class ;
+          rdfs:subClassOf :Characters ;
+          rdfs:comment "Contains all the patients"@en ;
+          rdfs:label "Patients"@en ;
+          rdfs:sameAs "https://bioportal.bioontology.org/ontologies/SNOMEDCT/?p=classes&conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2FSNOMEDCT%2F116154003&jump_to_nav=true" .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#PlasticSurgery
+:PlasticSurgery rdf:type owl:Class ;
+                rdfs:subClassOf :Specialties ;
+                rdfs:comment "Plastic surgery"@en ;
+                rdfs:label "PlasticSurgery"@en ;
+                rdfs:sameAs "https://bioportal.bioontology.org/ontologies/SNOMEDCT/?p=classes&conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2FSNOMEDCT%2F394611003&jump_to_nav=true" .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Severe
+:Severe rdf:type owl:Class ;
+        rdfs:subClassOf :Illness ;
+        rdfs:comment "Illness that doesn't necessary lead to death but that needs treatment"@en ;
+        rdfs:label "Severe"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Specialties
+:Specialties rdf:type owl:Class ;
+             rdfs:subClassOf :Hospital ;
+             rdfs:comment "Specialties that are treated in the hospital"@en ;
+             rdfs:label "Specialties"@en .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Workers
+:Workers rdf:type owl:Class ;
+         rdfs:subClassOf :Characters ;
+         rdfs:comment "Containts all the workers"@en ;
+         rdfs:label "Workers"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#BrainCancer
+:BrainCancer rdf:type owl:NamedIndividual ,
+                      :Deadly .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#DerekSheperd
+:DerekSheperd rdf:type owl:NamedIndividual ,
+                       :Doctor ;
+              :goTo :GreySloanMemorial ;
+              :treats :JackDawson .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#GreySloanMemorial
+:GreySloanMemorial rdf:type owl:NamedIndividual ,
+                            :Hospital ;
+                   :isLocated :Seattle ;
+                   :hasStreet "exampleStreet" ;
+                   :numWorkers "800"^^xsd:unsignedInt .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#HighBloodPreasure
+:HighBloodPreasure rdf:type owl:NamedIndividual ,
+                            :Minor .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#JackDawson
+:JackDawson rdf:type owl:NamedIndividual ,
+                     :HospitalizedPatient ;
+            :goTo :GreySloanMemorial ;
+            :hasDoctor :DerekSheperd ;
+            :hasIllness :BrainCancer ;
+            :name "Jack" .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#MeredithGrey
+:MeredithGrey rdf:type owl:NamedIndividual ,
+                       :Doctor ;
+              :goTo :GreySloanMemorial .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#MirandaBaily
+:MirandaBaily rdf:type owl:NamedIndividual ,
+                       :Boss ;
+              :goTo :GreySloanMemorial ;
+              :isBoss :GreySloanMemorial .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Seattle
+:Seattle rdf:type owl:NamedIndividual ,
+                  :City .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Cardiology
+                :Neurology
+                :PlasticSurgery
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#o> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#i> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#w> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#s> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#d> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ rdfs:comment "If a patient has less than two months left, he is hospitalized" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Patients ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasIllness ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#i>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :Deadly ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :estimatedMonthsLeft ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#w>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first <urn:swrl:var#w> ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first 2 ;
+                                                                                                                                                           rdf:rest rdf:nil
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :HospitalizedPatient ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdfs:comment "Every patient with a deadly illness, gets a palliative doctor" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Patients ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasIllness ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#w>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :Deadly ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :PalliativeCare ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#s>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Doctor ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#d>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasSpecialty ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#d> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#s>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasDoctor ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#d>
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ]
+ ] .
+
+[ rdfs:comment "If the illnes is minor, the patient doesn't stay at the hospital" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Patients ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasIllness ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#w>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :Minor ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#w>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :OneDayPatient ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

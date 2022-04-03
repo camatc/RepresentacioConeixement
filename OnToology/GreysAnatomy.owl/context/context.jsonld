@@ -1,0 +1,147 @@
+{
+  "@context" : {
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "hasStreet" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasStreet",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Characters" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Characters"
+    },
+    "goTo" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#goTo",
+      "@type" : "@id"
+    },
+    "Deadly" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Deadly"
+    },
+    "Doctor" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Doctor"
+    },
+    "Cardiology" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Cardiology"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "OneDayPatient" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#OneDayPatient"
+    },
+    "Location" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Location"
+    },
+    "estimatedMonthsLeft" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#estimatedMonthsLeft",
+      "@type" : "http://www.w3.org/2001/XMLSchema#unsignedInt"
+    },
+    "HospitalizedPatient" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#HospitalizedPatient"
+    },
+    "Neurology" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Neurology"
+    },
+    "Severe" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Severe"
+    },
+    "Minor" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Minor"
+    },
+    "name" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "treats" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#treats",
+      "@type" : "@id"
+    },
+    "isBoss" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#isBoss",
+      "@type" : "@id"
+    },
+    "hasSpecialty" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasSpecialty",
+      "@type" : "@id"
+    },
+    "isOwner" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#isOwner",
+      "@type" : "@id"
+    },
+    "Illness" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Illness"
+    },
+    "numWorkers" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#numWorkers",
+      "@type" : "http://www.w3.org/2001/XMLSchema#unsignedInt"
+    },
+    "Boss" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Boss"
+    },
+    "PalliativeCare" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#PalliativeCare"
+    },
+    "hasZipCode" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasZipCode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Hospital" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Hospital"
+    },
+    "Owner" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Owner"
+    },
+    "Specialties" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Specialties"
+    },
+    "Author" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Author"
+    },
+    "Management" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Management"
+    },
+    "City" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#City"
+    },
+    "Patients" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Patients"
+    },
+    "PlasticSurgery" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#PlasticSurgery"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Nurse" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Nurse"
+    },
+    "hasIllness" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasIllness",
+      "@type" : "@id"
+    },
+    "Workers" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Workers"
+    },
+    "hasDoctor" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#hasDoctor",
+      "@type" : "@id"
+    },
+    "isLocated" : {
+      "@id" : "http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#isLocated",
+      "@type" : "@id"
+    }
+  }
+}
