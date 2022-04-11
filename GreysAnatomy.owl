@@ -157,7 +157,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#estimatedMonthsLeft">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Deadly"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Patients"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
         <rdfs:label xml:lang="en">estimatedMonthsLeft</rdfs:label>
     </owl:DatatypeProperty>
@@ -480,6 +480,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#BrokenBone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#BrokenBone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Minor"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#DerekSheperd -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#DerekSheperd">
@@ -516,7 +524,17 @@
         <GreysAnatomyOntology:goTo rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#GreySloanMemorial"/>
         <GreysAnatomyOntology:hasDoctor rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#DerekSheperd"/>
         <GreysAnatomyOntology:hasIllness rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#BrainCancer"/>
+        <GreysAnatomyOntology:estimatedMonthsLeft rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">1</GreysAnatomyOntology:estimatedMonthsLeft>
         <GreysAnatomyOntology:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jack</GreysAnatomyOntology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#JessicaAlba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#JessicaAlba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#Patients"/>
+        <GreysAnatomyOntology:hasIllness rdf:resource="http://www.semanticweb.org/claud/ontologies/2022/2/GreysAnatomyOntology#BrokenBone"/>
     </owl:NamedIndividual>
     
 
